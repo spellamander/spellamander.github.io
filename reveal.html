@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      An ordinary scrolling document, unlike `index.html`: the game is a
+      fixed phone screen that must not zoom or pan, and this page is a
+      card somebody reads. Zoom stays on, because a reader who wants a
+      closer look at nine columns of letters should get one.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Spellamander — reveal</title>
+    <meta
+      name="description"
+      content="Someone's finished Spellamander board, with the letters hidden until you ask."
+    />
+    <!--
+      No Open Graph description of the board itself, on purpose: a chat app
+      that unfurled the link into a preview would print the day's letters
+      in the message, which is the one thing this page exists to prevent.
+    -->
+    <meta property="og:title" content="A Spellamander board" />
+    <meta property="og:description" content="Letters hidden until you tap." />
+    <meta name="theme-color" content="#f0f4ec" />
+    <!--
+      Relative, not rooted. This page is served from the site root in
+      the web build and from a project subdirectory on the host that
+      carries the standalone viewer, and `./` is the one spelling that
+      finds the icon in both.
+    -->
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+    />
+    <script type="module" crossorigin src="/spellamander-reveal/assets/reveal-BSZ8QxRy.js"></script>
+    <link rel="stylesheet" crossorigin href="/spellamander-reveal/assets/reveal-Q85xImpB.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
